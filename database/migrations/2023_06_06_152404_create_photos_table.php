@@ -19,6 +19,7 @@ class CreatePhotosTable extends Migration
             $table->string('caption');
             $table->string('file_path');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
