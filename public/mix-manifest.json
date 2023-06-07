@@ -2,5 +2,6 @@
     "/js/main.js": "/js/main.js",
     "/js/purecounter/purecounter_vanilla.js": "/js/purecounter/purecounter_vanilla.js",
     "/js/helper/modal.js": "/js/helper/modal.js",
+    "/js/helper/photo.js": "/js/helper/photo.js",
     "/css/main.css": "/css/main.css"
 }
