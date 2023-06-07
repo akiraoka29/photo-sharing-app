@@ -66,6 +66,10 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.7.0.min.js') }}"></script>
+
+    <!-- My Js -->
+    <script src="{{ asset('js/helper/modal.js') }}"></script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/main.js', 'public/js');
-mix.js('resources/js/aos/aos.js', 'public/js/aos');
 mix.js('resources/js/purecounter/purecounter_vanilla.js', 'public/js/purecounter');
+mix.js('resources/js/helper/modal.js', 'public/js/helper');
 
 mix.postCss('resources/css/main.css', 'public/css');
