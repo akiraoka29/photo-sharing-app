@@ -1,12 +1,14 @@
 jQuery(function($) {
     // Initialize
-    let Modal = {
+    let Props = {
         element: {
             signinModal: $('#signinModal'),
             signupModal: $('#signupModal'),
             signupLink: '#signupLink'
         }
     }
+    let Modal = {}
+
     // Call Function
     Modal.init = () => {
         Modal.event.showSignupOnClick();
@@ -16,17 +18,17 @@ jQuery(function($) {
         signupModal: (type='show') => {
             console.log('-- Signup Modal --');
             if(type == 'show') {
-                Modal.element.signupModal.modal('show');
+                Props.element.signupModal.modal('show');
             }else {
-                Modal.element.signupModal.modal('hide');
+                Props.element.signupModal.modal('hide');
             }
         },
         signinModal: (type='show') => {
             console.log('-- Signin Modal --');
             if(type == 'show') {
-                Modal.element.signinModal.modal('show');
+                Props.element.signinModal.modal('show');
             }else {
-                Modal.element.signinModal.modal('hide');
+                Props.element.signinModal.modal('hide');
             }
         }
 
@@ -34,7 +36,7 @@ jQuery(function($) {
 
     Modal.event = {
         showSignupOnClick: () => {
-            $(document).on('click', Modal.element.signupLink, () => {
+            $(document).on('click', Props.element.signupLink, () => {
                 Modal.active.signinModal('hide')
                 Modal.active.signupModal('show')
             })
