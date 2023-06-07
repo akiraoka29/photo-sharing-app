@@ -8,11 +8,13 @@
             image="img/hero-bg-1.jpg" />
         
         <!-- Show List Photo Section -->
-        <x-photo />
+        <x-photoList />
 
         <!-- Show Modal -->
-        <x-modal.signin title="Sign In" />
-        <x-modal.signup title="Sign Up" />
+        <x-modal.signin 
+            title="Sign In" />
+        <x-modal.signup 
+            title="Sign Up" />
     </main>
 
 @endsection
