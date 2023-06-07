@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,7 +10,8 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.js('resources/js/main.js', 'public/js');
+mix.js('resources/js/aos/aos.js', 'public/js/aos');
+mix.js('resources/js/purecounter/purecounter_vanilla.js', 'public/js/purecounter');
+
+mix.postCss('resources/css/main.css', 'public/css');
