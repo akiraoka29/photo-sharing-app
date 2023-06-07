@@ -17,7 +17,7 @@
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav><!-- End Nav Menu -->
 
-        <a href="index.html#about" class="btn-getstarted">Get Started</a>
+        <a href="javascript:void(0)" class="btn-getstarted" data-bs-toggle="modal" data-bs-target="#signinModal">Get Started</a>
 
     </div>
 </header><!-- End Header -->
