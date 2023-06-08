@@ -66,10 +66,21 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
-    <script src="{{ asset('js/jquery-3.7.0.min.js') }}"></script>
+    {{-- <script src="{{ asset('js/jquery-3.7.0.min.js') }}"></script> --}}
+    <script src="{{ asset('js/require.js') }}"></script>
 
     <!-- My Js -->
-    <script src="{{ asset('js/helper/modal.js') }}"></script>
+    <script>
+        var isAuth = 0;
+        // Configure RequireJS and load the scripts
+        require.config({
+            paths: {
+                'jquery': "js/jquery-3.7.0.min",
+            }
+        });
+    </script>
+    <script src="{{ asset('js/module/modal.js') }}"></script>
+    <script src="{{ asset('js/module/photo.js') }}"></script>
 </body>
 
 </html>

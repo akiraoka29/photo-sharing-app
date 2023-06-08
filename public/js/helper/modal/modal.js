@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
 /*!**************************************!*\
-  !*** ./resources/js/helper/modal.js ***!
+  !*** ./resources/js/module/modal.js ***!
   \**************************************/
 jQuery(function () {
   // Initialize

@@ -10,9 +10,18 @@ const mix = require('laravel-mix');
  |
  */
 
+// Set Module Auto Load
+const moduleAutoLoad = {
+    jquery: ['$', 'window.jQuery', 'jQuery'],
+    bootstrap: ['Bootstrap', 'window.Bootstrap'],
+    '@popperjs/core': ['Popper', 'window.Popper'],
+    './modal': ['js/module/modal.js']
+}
+
 mix.js('resources/js/main.js', 'public/js');
 mix.js('resources/js/purecounter/purecounter_vanilla.js', 'public/js/purecounter');
-mix.js('resources/js/helper/modal.js', 'public/js/helper');
-mix.js('resources/js/helper/photo.js', 'public/js/helper');
+mix.js('resources/js/module/modal.js', 'public/js/module')
+    .js('resources/js/module/photo.js', 'public/js/module')
+    .autoload(moduleAutoLoad);
 
 mix.postCss('resources/css/main.css', 'public/css');
