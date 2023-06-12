@@ -7,5 +7,7 @@ class Message
     const
         UNAUTHORIZED = 'Unauthorized.',
         FORBIDDEN = 'Forbidden.',
-        NOT_FOUND = 'Data not found';
+        TAG_REQUIRED = 'Tag is required.',
+        NOT_FOUND = 'Data not found',
+        NOT_IMAGE = 'Image Invalid';
 }

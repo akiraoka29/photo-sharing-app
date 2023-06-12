@@ -23,5 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('/photos', PhotoController::class);
 
+Route::POST('/photos/{id}/like', [PhotoController::class, 'like']);
+Route::POST('/photos/{id}/unlike', [PhotoController::class, 'unlike']);
+
 Route::POST('/login', [AuthController::class, 'login']);
 Route::POST('/register', [AuthController::class, 'register']);

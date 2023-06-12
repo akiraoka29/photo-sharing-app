@@ -11,7 +11,9 @@ class Photo extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
+        'title',
         'caption',
+        'file_name',
         'file_path',
     ];
 
@@ -25,5 +27,10 @@ class Photo extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 }

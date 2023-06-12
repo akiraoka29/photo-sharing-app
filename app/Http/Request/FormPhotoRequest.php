@@ -7,11 +7,13 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\JsonResponse;
 
+use App\Enum\Message;
+
 class FormPhotoRequest extends FormRequest
 {
     public function authorize()
     {
-        return true;
+        return $this->user() !== null;
     }
 
     public function rules()
@@ -21,6 +23,17 @@ class FormPhotoRequest extends FormRequest
             'caption' => 'required|max:255',
             'image' => 'image|mimes:jpeg,png,jpg|max:2048',
         ];
+    }
+
+    protected function failedAuthorization()
+    {
+        $response = [
+            'message' => Message::UNAUTHORIZED,
+        ];
+
+        throw new HttpResponseException(
+            response()->json($response, JsonResponse::HTTP_UNPROCESSABLE_ENTITY)
+        );
     }
 
     protected function failedValidation(Validator $validator)
