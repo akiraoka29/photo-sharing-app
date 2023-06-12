@@ -22,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('/photos', PhotoController::class);
+
+Route::POST('/login', [AuthController::class, 'login']);
+Route::POST('/register', [AuthController::class, 'register']);
