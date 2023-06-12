@@ -70,6 +70,8 @@ php artisan serve
 Aplikasi akan berjalan pada `http://localhost:8000`.
 
 ## API Routes
+- POST `/api/login` - Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password.
+- POST `/api/register` - Membuat akun baru untuk mendapatkan akses login menggunakan email dan password.
 - GET `/api/photos` - Mendapatkan data array berisi foto-foto yang telah dibuat.
 - POST `/api/photos` - Membuat sebuah foto dari user yang sudah login.
 - GET `/api/photos/:id` - Mendapatkan data foto berdasarkan ID.
