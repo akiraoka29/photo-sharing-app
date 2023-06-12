@@ -90,5 +90,14 @@ Berikut adalah daftar environment variables yang dapat Anda atur di file `.env`:
 
 Pastikan untuk mengisi nilai environment variables yang sesuai dengan lingkungan pengembangan Anda.
 
+## Berbagi Koleksi Postman
+Koleksi Postman yang berisi kumpulan permintaan API dapat dibagikan melalui tautan. Berikut adalah langkah-langkah untuk berbagi koleksi Postman ini:
+1. Unduh dan instal Postman jika belum terpasang di sistem Anda. Anda dapat mengunduhnya dari https://www.postman.com/downloads/.
+2. Buka Postman dan impor koleksi dengan cara berikut:
+    - Klik tombol "Import" di sisi kiri atas tampilan Postman.
+    - Pilih opsi "Import From Link" dan tempelkan tautan berikut: https://api.postman.com/collections/27917708-44e5e62d-0765-4f26-8db1-4b9c1a94f4d3?access_key=PMAT-01H2RCNNWTNR1MX2X1SZ4C1H5W
+    - Klik tombol "Import" untuk mengimpor koleksi.
+3. Setelah koleksi berhasil diimpor, Anda dapat menjelajahi dan menjalankan permintaan-permintaan API yang terkandung di dalamnya.
+
 ## Kontribusi
 Jika Anda menemukan bug atau ingin berkontribusi dalam pengembangan aplikasi ini, silakan ajukan issue atau buat pull request
