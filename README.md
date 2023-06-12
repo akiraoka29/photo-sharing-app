@@ -59,7 +59,11 @@ php artisan db:seed
 ```shell
 npm run dev
 ```
-12. Jalankan server lokal:
+12. Jalankan perintah berikut untuk membuat symlink antara direktori public dengan direktori storage
+```shell
+php artisan storage:link
+```
+13. Jalankan server lokal:
 ```shell
 php artisan serve
 ```
