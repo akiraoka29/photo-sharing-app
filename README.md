@@ -69,7 +69,7 @@ Aplikasi akan berjalan pada `http://localhost:8000`.
 - GET `/api/photos` - Mendapatkan data array berisi foto-foto yang telah dibuat.
 - POST `/api/photos` - Membuat sebuah foto dari user yang sudah login.
 - GET `/api/photos/:id` - Mendapatkan data foto berdasarkan ID.
-- PUT `/api/photos/:id` - Memperbarui foto, caption, dan tags pada foto yang dimiliki oleh user.
+- PUT `/api/photos/:id` - Memperbarui caption, dan tags pada foto yang dimiliki oleh user.
 - DELETE `/api/photos/:id` - Menghapus foto yang dimiliki oleh user.
 - POST `/photos/:id/like` - Menyukai sebuah foto.
 - POST `/photos/:id/unlike` - Menghapus penyukaan sebuah foto.
