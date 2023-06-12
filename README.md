@@ -12,7 +12,7 @@ ShareCare adalah aplikasi berbagi foto yang memungkinkan pengguna untuk melakuka
 ## Instalasi
 1. Clone repository ini ke direktori lokal Anda:
 ```shell
-    git clone https://github.com/akiraoka29/photo-sharing-app.git
+git clone https://github.com/akiraoka29/photo-sharing-app.git
 ```
 2. Masuk ke direktori proyek:
 ```shell
