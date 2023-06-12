@@ -7,13 +7,28 @@ use Illuminate\View\Component;
 class photoList extends Component
 {
     /**
+     * The tags.
+     *
+     * @var string
+     */
+    public $tags;
+
+    /**
+     * The photos.
+     *
+     * @var string
+     */
+    public $photos;
+
+    /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($tags,$photos)
     {
-        //
+        $this->tags = $tags;
+        $this->photos = $photos;
     }
 
     /**

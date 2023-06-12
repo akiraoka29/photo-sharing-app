@@ -163,7 +163,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var glightbox = GLightbox({
     selector: '.glightbox'
   });
-
+  glightbox.on('open', function (data) {
+    // data is an object that contain the following
+    // const { slideNode, slideConfig } = data;
+    // Add Caption
+    // $(slideNode).find('.gdesc-inner').append(`<p>${slideConfig.description}</p>`)
+    // slideIndex - the slide index
+    // slideNode - the node you can modify
+    // slideConfig - will contain the configuration of the slide like title, description, etc.
+    // player - the slide player if it exists otherwise will return false
+    // trigger - this will contain the element that triggers this slide, this can be a link, a button, etc in your HTML, it can be null if the elements in the gallery were set dinamically
+  });
   /**
    * Initiate Pure Counter
    */

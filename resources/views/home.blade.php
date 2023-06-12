@@ -8,7 +8,9 @@
             image="img/hero-bg-1.jpg" />
         
         <!-- Show List Photo Section -->
-        <x-photoList />
+        <x-photoList 
+            :tags="$tags" 
+            :photos="$photos" />
 
         <!-- Show Modal -->
         <x-modal.signin 

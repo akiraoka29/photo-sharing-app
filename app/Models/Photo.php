@@ -15,6 +15,8 @@ class Photo extends Model
         'file_path',
     ];
 
+    protected $dates = ['deleted_at']; 
+
     public function user()
     {
         return $this->belongsTo(User::class);

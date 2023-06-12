@@ -7,13 +7,20 @@ use Illuminate\View\Component;
 class photo extends Component
 {
     /**
+     * The photo.
+     *
+     * @var string
+     */
+    public $photo;
+
+    /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($photo)
     {
-        //
+        $this->photo = $photo;
     }
 
     /**
