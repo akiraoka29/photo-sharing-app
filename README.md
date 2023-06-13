@@ -59,20 +59,28 @@ php artisan db:seed
 ```shell
 npm run dev
 ```
-12. Jalankan server lokal:
+12. Jalankan perintah berikut untuk membuat symlink antara direktori public dengan direktori storage
+```shell
+php artisan storage:link
+```
+13. Jalankan server lokal:
 ```shell
 php artisan serve
 ```
 Aplikasi akan berjalan pada `http://localhost:8000`.
 
 ## API Routes
-- GET `/api/photos` - Mendapatkan data array berisi foto-foto yang telah dibuat.
-- POST `/api/photos` - Membuat sebuah foto dari user yang sudah login.
-- GET `/api/photos/:id` - Mendapatkan data foto berdasarkan ID.
-- PUT `/api/photos/:id` - Memperbarui caption, dan tags pada foto yang dimiliki oleh user.
-- DELETE `/api/photos/:id` - Menghapus foto yang dimiliki oleh user.
-- POST `/photos/:id/like` - Menyukai sebuah foto.
-- POST `/photos/:id/unlike` - Menghapus penyukaan sebuah foto.
+| Action         | Method | Path                   | Keterangan                                                                              | Auth
+|----------------|--------|------------------------|-----------------------------------------------------------------------------------------|--------------------
+| Login          | POST   | /api/login             | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password    | No
+| Register       | POST   | /api/register          | Membuat akun baru untuk mendapatkan akses login dengan menggunakan email dan password   | No
+| Get Photo      | GET    | /api/photos            | Mendapatkan data array berisi foto-foto yang telah dibuat                               | No
+| Create Photo   | POST   | /api/photos            | Membuat sebuah foto dari user yang sudah login                                          | Yes
+| Photo Detail   | GET    | /api/photos/:id        | Mendapatkan data foto berdasarkan ID                                                    | No
+| Update Photo   | PUT    | /api/photos/:id        | Memperbarui caption, dan tags pada foto yang dimiliki oleh user                         | Yes
+| Delete Photo   | DELETE | /api/photos/:id        | Menghapus foto yang dimiliki oleh user                                                  | Yes
+| Like Photo     | POST   | /api/photos/:id/like   | Menyukai sebuah foto                                                                    | Yes
+| Unlike Photo   | POST   | /api/photos/:id/unlike | Menghapus penyukaan sebuah foto                                                         | Yes
 
 ## Environtment Variables
 Berikut adalah daftar environment variables yang dapat Anda atur di file `.env`:
