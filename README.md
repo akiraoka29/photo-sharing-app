@@ -70,8 +70,8 @@ php artisan serve
 Aplikasi akan berjalan pada `http://localhost:8000`.
 
 ## API Routes
-| Action         | Method | Path                   | Keterangan                                                                              | Auth
-|----------------|--------|------------------------|-----------------------------------------------------------------------------------------|--------------------
+| Action         | Method | Path                   | Keterangan                                                                                  | Auth
+|----------------|--------|------------------------|---------------------------------------------------------------------------------------------|--------------------
 | Login          | POST   | /api/login             | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password        | No
 | Register       | POST   | /api/register          | Membuat akun baru untuk mendapatkan akses login dengan menggunakan email dan password       | No
 | Get Photo      | GET    | /api/photos            | Mendapatkan data array berisi foto-foto yang telah dibuat                                   | No
@@ -81,6 +81,79 @@ Aplikasi akan berjalan pada `http://localhost:8000`.
 | Delete Photo   | DELETE | /api/photos/:id        | Menghapus foto yang dimiliki oleh user                                                      | Yes
 | Like Photo     | POST   | /api/photos/:id/like   | Menyukai sebuah foto                                                                        | Yes
 | Unlike Photo   | POST   | /api/photos/:id/unlike | Menghapus penyukaan sebuah foto                                                             | Yes
+
+### Login
+
+Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password
+
+- **Method**: POST
+- **Path**: /api/login
+
+#### Request Body
+
+| Parameter  | Tipe Data | Keterangan                   |
+|------------|-----------|------------------------------|
+| email      | string    | Email terdaftar              |
+| password   | string    | Password                     |
+
+### Register
+
+Membuat akun baru untuk mendapatkan akses login dengan menggunakan email dan password
+
+- **Method**: POST
+- **Path**: /api/register
+
+#### Request Body
+
+| Parameter  | Tipe Data | Keterangan                   |
+|------------|-----------|------------------------------|
+| name       | string    | Nama Anda                    |
+| email      | string    | Email                        |
+| password   | string    | Password                     |
+
+### Create Photo
+
+Membuat sebuah foto dari user yang sudah login.
+
+- **Method**: POST
+- **Path**: /api/photos
+
+#### Request Header
+
+| Header        | Nilai          | Keterangan                   |
+|---------------|----------------|------------------------------|
+| Authorization | Bearer <token> | Token akses untuk otentikasi |
+
+#### Request Body
+
+| Parameter  | Tipe Data | Keterangan                   |
+|------------|-----------|------------------------------|
+| title      | string    | Judul foto                   |
+| caption    | string    | Caption foto                 |
+| tags       | array     | Array tags yang terkait foto |
+| image      | file      | File gambar foto             |
+
+### Update Photo
+
+Memperbarui caption, dan tags pada foto yang dimiliki oleh user. 
+
+- **Method**: PUT
+- **Path**: /api/photos/:id
+
+#### Request Header
+
+| Header        | Nilai          | Keterangan                   |
+|---------------|----------------|------------------------------|
+| Authorization | Bearer <token> | Token akses untuk otentikasi |    
+    
+#### Request Body
+
+| Parameter  | Tipe Data | Keterangan                   |
+|------------|-----------|------------------------------|
+| title      | string    | Judul foto                   |
+| caption    | string    | Caption foto                 |
+| tags       | array     | Array tags yang terkait foto |
+| image      | file      | File gambar foto             |
 
 ## Environtment Variables
 Berikut adalah daftar environment variables yang dapat Anda atur di file `.env`:
