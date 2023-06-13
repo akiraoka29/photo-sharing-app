@@ -1,3 +1,16 @@
+## Daftar Isi
+- [Aplikasi Photo Sharing (ShareCare)](#aplikasi-photo-sharing-sharecare)
+- [Fitur](#fitur)
+- [Instalasi](#instalasi)
+- [API Routes](#api-routes)
+    - [Login](#login)
+    - [Register](#register)
+    - [Create Photo](#create-photo)
+    - [Update Photo](#update-photo)
+- [Environment Variables](#environment-variables)
+- [Berbagi Koleksi Postman](#berbagi-koleksi-postman)
+- [Kontribusi](#kontribusi)
+
 # Aplikasi Photo Sharing (ShareCare)
 ShareCare adalah aplikasi berbagi foto yang memungkinkan pengguna untuk melakukan login, membuat akun baru, melihat daftar foto, menggunggah foto, memperbarui caption dan tags pada foto, serta menyukai atau tidak menyukai foto.
 
