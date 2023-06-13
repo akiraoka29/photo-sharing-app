@@ -51,7 +51,7 @@ DB_PASSWORD=password_database
 ```shell
 php artisan migrate
 ```
-10. Jalankan seeder untuk membuat data master tags:
+10. Jalankan seeder untuk membuat data master tag:
 ```shell
 php artisan db:seed
 ```
@@ -72,15 +72,15 @@ Aplikasi akan berjalan pada `http://localhost:8000`.
 ## API Routes
 | Action         | Method | Path                   | Keterangan                                                                              | Auth
 |----------------|--------|------------------------|-----------------------------------------------------------------------------------------|--------------------
-| Login          | POST   | /api/login             | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password    | No
-| Register       | POST   | /api/register          | Membuat akun baru untuk mendapatkan akses login dengan menggunakan email dan password   | No
-| Get Photo      | GET    | /api/photos            | Mendapatkan data array berisi foto-foto yang telah dibuat                               | No
-| Create Photo   | POST   | /api/photos            | Membuat sebuah foto dari user yang sudah login                                          | Yes
-| Photo Detail   | GET    | /api/photos/:id        | Mendapatkan data foto berdasarkan ID                                                    | No
-| Update Photo   | PUT    | /api/photos/:id        | Memperbarui caption, dan tags pada foto yang dimiliki oleh user                         | Yes
-| Delete Photo   | DELETE | /api/photos/:id        | Menghapus foto yang dimiliki oleh user                                                  | Yes
-| Like Photo     | POST   | /api/photos/:id/like   | Menyukai sebuah foto                                                                    | Yes
-| Unlike Photo   | POST   | /api/photos/:id/unlike | Menghapus penyukaan sebuah foto                                                         | Yes
+| Login          | POST   | /api/login             | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password        | No
+| Register       | POST   | /api/register          | Membuat akun baru untuk mendapatkan akses login dengan menggunakan email dan password       | No
+| Get Photo      | GET    | /api/photos            | Mendapatkan data array berisi foto-foto yang telah dibuat                                   | No
+| Create Photo   | POST   | /api/photos            | Membuat sebuah foto dari user yang sudah login dan pastikan bahwa master tags sudah dibuat. | Yes
+| Photo Detail   | GET    | /api/photos/:id        | Mendapatkan data foto berdasarkan ID                                                        | No
+| Update Photo   | PUT    | /api/photos/:id        | Memperbarui caption, dan tags pada foto yang dimiliki oleh user                             | Yes
+| Delete Photo   | DELETE | /api/photos/:id        | Menghapus foto yang dimiliki oleh user                                                      | Yes
+| Like Photo     | POST   | /api/photos/:id/like   | Menyukai sebuah foto                                                                        | Yes
+| Unlike Photo   | POST   | /api/photos/:id/unlike | Menghapus penyukaan sebuah foto                                                             | Yes
 
 ## Environtment Variables
 Berikut adalah daftar environment variables yang dapat Anda atur di file `.env`:
