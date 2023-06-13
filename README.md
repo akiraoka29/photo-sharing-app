@@ -70,16 +70,16 @@ php artisan serve
 Aplikasi akan berjalan pada `http://localhost:8000`.
 
 ## API Routes
-| Action         | Method | Path                   | Keterangan                                        |
-|----------------|--------|------------------------|---------------------------------------------------|
-| Login          | GET    | /api/login             | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password         |
-| Register       | GET    | /api/register          | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password         |
-| Create Photo   | POST   | /api/photos            | Mendapatkan data array berisi foto-foto yang telah dibuat     |
-| Photo Detail   | GET    | /api/photos/:id        | Mendapatkan data foto berdasarkan ID.                              |
-| Update Photo   | PUT    | /api/photos/:id        | Memperbarui caption, dan tags pada foto yang dimiliki oleh user. |
-| Delete Photo   | DELETE | /api/photos/:id        | Menghapus foto yang dimiliki oleh user.             |
-| Like Photo     | POST   | /api/photos/:id/like   | Menyukai sebuah foto                              |
-| Unlike Photo   | POST   | /api/photos/:id/unlike | Menghapus penyukaan sebuah foto                    |
+| Action         | Method | Path                   | Keterangan                                                                              | Auth
+|----------------|--------|------------------------|-----------------------------------------------------------------------------------------|--------------------
+| Login          | GET    | /api/login             | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password    | No
+| Register       | GET    | /api/register          | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password    | No
+| Create Photo   | POST   | /api/photos            | Mendapatkan data array berisi foto-foto yang telah dibuat                               | Yes
+| Photo Detail   | GET    | /api/photos/:id        | Mendapatkan data foto berdasarkan ID.                                                   | No
+| Update Photo   | PUT    | /api/photos/:id        | Memperbarui caption, dan tags pada foto yang dimiliki oleh user.                        | Yes
+| Delete Photo   | DELETE | /api/photos/:id        | Menghapus foto yang dimiliki oleh user.                                                 | Yes
+| Like Photo     | POST   | /api/photos/:id/like   | Menyukai sebuah foto                                                                    | Yes
+| Unlike Photo   | POST   | /api/photos/:id/unlike | Menghapus penyukaan sebuah foto                                                         | Yes
 
 ## Environtment Variables
 Berikut adalah daftar environment variables yang dapat Anda atur di file `.env`:
