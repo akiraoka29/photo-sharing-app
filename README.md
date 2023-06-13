@@ -51,7 +51,7 @@ DB_PASSWORD=password_database
 ```shell
 php artisan migrate
 ```
-10. (Optional) Jalankan seeder untuk membuat data dummy yang diperlukan kedalam tabel yang sudah dibuat:
+10. Jalankan seeder untuk membuat data master tags:
 ```shell
 php artisan db:seed
 ```
