@@ -159,6 +159,11 @@ Memperbarui caption, dan tags pada foto yang dimiliki oleh user.
 |---------------|----------------|------------------------------|
 | Authorization | Bearer <token> | Token akses untuk otentikasi |    
     
+#### Path Parameter
+| Parameter     | Keterangan                     |
+|---------------|--------------------------------|
+| id            | ID foto yang akan diperbaharui |   
+    
 #### Request Body
 
 | Parameter  | Tipe Data | Keterangan                   |
