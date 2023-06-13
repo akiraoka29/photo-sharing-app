@@ -72,12 +72,13 @@ Aplikasi akan berjalan pada `http://localhost:8000`.
 ## API Routes
 | Action         | Method | Path                   | Keterangan                                                                              | Auth
 |----------------|--------|------------------------|-----------------------------------------------------------------------------------------|--------------------
-| Login          | GET    | /api/login             | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password    | No
-| Register       | GET    | /api/register          | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password    | No
-| Create Photo   | POST   | /api/photos            | Mendapatkan data array berisi foto-foto yang telah dibuat                               | Yes
-| Photo Detail   | GET    | /api/photos/:id        | Mendapatkan data foto berdasarkan ID.                                                   | No
-| Update Photo   | PUT    | /api/photos/:id        | Memperbarui caption, dan tags pada foto yang dimiliki oleh user.                        | Yes
-| Delete Photo   | DELETE | /api/photos/:id        | Menghapus foto yang dimiliki oleh user.                                                 | Yes
+| Login          | POST   | /api/login             | Mendapatkan akses bearer token dengan melakukan login menggunakan email dan password    | No
+| Register       | POST   | /api/register          | Membuat akun baru untuk mendapatkan akses login dengan menggunakan email dan password   | No
+| Get Photo      | GET    | /api/photos            | Mendapatkan data array berisi foto-foto yang telah dibuat                               | No
+| Create Photo   | POST   | /api/photos            | Membuat sebuah foto dari user yang sudah login                                          | Yes
+| Photo Detail   | GET    | /api/photos/:id        | Mendapatkan data foto berdasarkan ID                                                    | No
+| Update Photo   | PUT    | /api/photos/:id        | Memperbarui caption, dan tags pada foto yang dimiliki oleh user                         | Yes
+| Delete Photo   | DELETE | /api/photos/:id        | Menghapus foto yang dimiliki oleh user                                                  | Yes
 | Like Photo     | POST   | /api/photos/:id/like   | Menyukai sebuah foto                                                                    | Yes
 | Unlike Photo   | POST   | /api/photos/:id/unlike | Menghapus penyukaan sebuah foto                                                         | Yes
 
